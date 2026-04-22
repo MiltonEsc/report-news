@@ -91,6 +91,7 @@ export default function Page() {
       return;
     }
 
+    const resolvedWebhookUrl = webhookUrl;
     const controller = new AbortController();
 
     async function loadNews() {
@@ -98,7 +99,7 @@ export default function Page() {
         setIsLoading(true);
         setError(null);
 
-        const response = await fetch(webhookUrl, {
+        const response = await fetch(resolvedWebhookUrl, {
           method: "GET",
           signal: controller.signal,
           headers: {
