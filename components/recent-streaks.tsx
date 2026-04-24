@@ -49,7 +49,7 @@ export function RecentStreaks({ streaks }: RecentStreaksProps) {
     <section>
       <div className="mb-5 flex items-start justify-between gap-4">
         <div>
-          <h2 className="text-[2rem] font-semibold tracking-[-0.04em] text-neutral-950 dark:text-white">
+          <h2 className="text-[1.5rem] font-semibold tracking-[-0.04em] text-neutral-950 dark:text-white sm:text-[2rem]">
             Estado Actual
           </h2>
           <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-300">
@@ -60,7 +60,7 @@ export function RecentStreaks({ streaks }: RecentStreaksProps) {
       </div>
 
       {streaks.length === 0 ? (
-        <div className="rounded-[1.5rem] bg-white px-6 py-10 text-center text-sm text-neutral-600 shadow-[0_12px_30px_rgba(15,23,42,0.06)] dark:bg-[#15191d] dark:text-neutral-300">
+        <div className="rounded-[1.5rem] bg-white px-5 py-8 text-center text-sm text-neutral-600 shadow-[0_12px_30px_rgba(15,23,42,0.06)] dark:bg-[#15191d] dark:text-neutral-300 sm:px-6 sm:py-10">
           Se necesitan al menos dos noticias válidas para calcular rachas.
         </div>
       ) : (
@@ -68,13 +68,13 @@ export function RecentStreaks({ streaks }: RecentStreaksProps) {
           {streaks.map((streak, index) => (
             <article
               key={streak.id}
-              className={`rounded-[1.5rem] p-5 shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition-colors ${
+              className={`rounded-[1.5rem] p-4 shadow-[0_12px_30px_rgba(15,23,42,0.06)] transition-colors sm:p-5 ${
                 index === 0
                   ? "bg-[#101317] text-white"
                   : "bg-white text-neutral-950 dark:bg-[#15191d] dark:text-white"
               }`}
             >
-              <div className="flex items-center justify-between gap-3">
+              <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
                 <span
                   className={`text-xs font-semibold uppercase tracking-[0.22em] ${
                     index === 0

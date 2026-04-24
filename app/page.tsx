@@ -85,7 +85,7 @@ export default function Page() {
 
     if (!webhookUrl) {
       setError(
-        "Falta configurar NEXT_PUBLIC_N8N_WEBHOOK para consultar las noticias.",
+        "Falta configurar la key para consultar las noticias.",
       );
       setIsLoading(false);
       return;
