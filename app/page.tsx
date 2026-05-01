@@ -5,6 +5,7 @@ import { AlertTriangle, Loader2 } from "lucide-react";
 import { NewsTable } from "@/components/news-table";
 import { PeaceCounterHero } from "@/components/peace-counter-hero";
 import { RecentStreaks } from "@/components/recent-streaks";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 type NewsItem = {
   id_unico: string;
@@ -217,12 +218,13 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-[#f4f4f2] text-neutral-950 dark:bg-[#101215] dark:text-neutral-100">
       <div className="mx-auto flex min-h-screen w-full max-w-[1360px] flex-col gap-10 px-6 py-7 sm:px-8 lg:px-10">
-        <header className="flex items-center justify-between">
+        <header className="flex items-center justify-between gap-4">
           <div>
             <p className="text-[2rem] font-semibold tracking-[-0.05em] text-neutral-950 dark:text-white">
               Monitor de Seguimiento 
             </p>
           </div>
+          <ThemeToggle />
         </header>
 
         <PeaceCounterHero
